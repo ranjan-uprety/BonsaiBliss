@@ -56,9 +56,13 @@ cd BonsaiBliss
 
 Then, open the html/index.html file in your browser. No server setup required.
 
-🙌 Contributions
+
+## 🙌 Contributions
 This project is a part of personal web development learning and exploration.
 Contributions are welcome via pull requests, suggestions, or issue reports.
 
-📧 Contact
-Created by Ranjan Uprety – feel free to reach out for feedback or collaboration ideas!
+
+## 📧 Contact
+
+Created by [Ranjan Uprety](https://github.com/ranjan-uprety) – feel free to reach out for feedback or collaboration ideas!
+
