@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><!--linking all needed CSS and JS with the HTML file-->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/products.css">
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../Assets/css/fontello.css">
+    <script src="../JS/cart.js"></script>
+    <script src="../JS/popup.js"></script>
+    <title>Blog</title>
+    <style>
+        /*Positioning main container of the product description*/
+        .container {
+            display: flex;
+            position: relative;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            height: fit-content;
+        }
+        /*Image container of the item description page*/
+        .image {
+            flex: 35%;
+        }
+        /*Image inside the image container*/
+        .image img {
+            border-radius: 10px;
+            outline: 2px solid black;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        /*description container of item*/
+        .details {
+            border-left: 1px solid grey;
+            padding-left: 30px;
+            flex: 65%
+        }
+        /*title of item*/
+        .details h1 {
+            font-weight: bolder;
+            font-size: 40px;
+        }
+        /*description of item*/
+        .details p {
+            text-align: justify;
+        }
+        /*button to add to cart*/
+        .products2-cart {
+            margin: 15px auto auto auto;
+            cursor: pointer;
+            padding: 10px 17%;
+            background-color: #2f2626;
+            color: white;
+            border-radius: 90px;
+            border: none;
+            transition: 0.3s;
+        }
+        /*hover effect for button*/
+        .products2-cart:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 2px black;
+        }
+        /*read more button to expand description*/
+        .readmore {
+            background: none;
+            border: none;
+            font-weight: bolder;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        /*hover effect on button*/
+        .readmore:hover {
+            text-decoration: underline;
+        }
+        /*expanded description*/
+        #more {
+            display: none;
+        }
+    </style>
+    <!--Function to expand the description
+    Removes the dots and replaces it with expanded text and vice versa-->
+    <script>
+        function read_more() {
+            var dots = document.getElementById("dots");
+            var texts = document.getElementById("more");
+            var btn_text = document.getElementById("read");
+            if (dots.style.display == "none") {
+                dots.style.display = "inline";
+                btn_text.innerHTML = "Read more";
+                texts.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btn_text.innerHTML = "Read less";
+                texts.style.display = "inline";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" id="check"><!--to check if slider is enabled or no (display:none)-->
+    <nav>
+        <div class="nav-content"><!--creating the content container-->
+            <div class="nav-left"><!--Left side of container-->
+                <img src="../Assets/Logo.png"><!--logo-->
+            </div>
+            <div class="nav-right"><!--right side of container-->
+                <a href="index.html">Home</a><!--Nav links-->
+                <a href="products.html">Products</a>
+                <a href="Blog.html">Blog</a>
+                <a href="About.html">About</a>
+                <a href="research.html">Research</a>
+                <label class="myCart" for="check"><i class="icon-basket"></i>Cart</label><!--Cart Button-->
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="container"><!--main container of description-->
+            <div class="image"><!--image of item-->
+                <img src="../Assets/images/cedar.jpg">
+            </div>
+            <div class="details"><!--details of item-->
+                <h1>5 Yrs Old Cedar Bonsai Plant</h1>
+                <p>Treasure the beauty of this highly detailed Cedar bonsai. With soft leaves and a
+                    partially-exposed root system, this captivating two foot tall tree is sure to catch your
+                    eye<span id="dots">...</span><span id="more"> situated in a rectangular shaped planter
+                        filled with artificial dirt, it's the ideal size for an office or small living space.
+                        Both friends and family will be delighted to receive this enchanting tree as a gift for
+                        any occasion.</span></p><!--expanded text hidden with dots-->
+                <button id="read" class="readmore" onclick="read_more()">Read more</button><!--button to display expanded text-->
+                <h2><span style="text-decoration:line-through">Rs. 1500</span> <span style="font-weight:bold">Rs.
+                        1200</span></h2><!--Price with discount-->
+                <h3><span style="color:red;">Low in stock!</span></h3>
+                <div class="quantity"><!--Quantity input-->
+                    <button onclick="substractquantity(this)">-</button>
+                    <input type="numbers" value=1>
+                    <button onclick="addquantity(this)">+</button>
+                </div>
+                <button class="products2-cart" onclick="additemagain(this)">Add to Cart</button><!--add to cart button to add item to cart list according to the quantity-->
+            </div>
+        </div>
+        <h1 style="text-align: center;font-size: 50px;margin: 70px auto 0 auto;">Related Products</h1><!--Title to another container-->
+        <div class="content-grid"><!--container to show other products-->
+            <div class="items"><!--items in container-->
+                <a href="products2.html">
+                    <span class="product-desc">Juniper (Juniperus communis ) is an evergreen shrub found on
+                        mountains and heaths throughout Europe, Southwest Asia, and North America. The tree
+                        grows to a height of 6-25 ft (2-8 m) and has stiff, pointed needles that grow to 0.4 in
+                        (1 cm) long.</span>
+                    <img class="img" src="../Assets/images/juniper.png">
+                    <h1>Juniper</h1>
+                    <h3 style="font-weight: bold;">Rs. 1700</h3>
+                </a>
+                <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items">
+                <a href="products2.html">
+                    <span class="product-desc">The olive tree ranges in height from 3 to 12 metres (10 to 40
+                        feet) or more and has numerous branches. Its leaves, leathery and lance-shaped, are dark
+                        green above and silvery on the underside and are paired opposite each other on the twig.
+                        The wood is resistant to decay.</span>
+                    <img class="img" src="../Assets/images/Olive.jpg">
+                    <h1>Olive</h1>
+                    <h3 style="font-weight: bold;">Rs. 1999</h3>
+                </a>
+                <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items">
+                <a href="products2.html">
+                    <span class="product-desc">The white oak is a large, strong, imposing specimen. It has a
+                        short stocky trunk with massive horizontial limbs. The wide spreading branches form an
+                        upright, broad-rounded crown.</span>
+                    <img class="img" src="../Assets/images/white oak.jpg">
+                    <h1>White Oak</h1>
+                    <h3 style="font-weight: bold;">Rs. 1250</h3>
+                </a>
+                <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items">
+                <a href="products2.html">
+                    <span class="product-desc">The Malayan banyan (Ficus microcarpa), a fast-growing native fig,
+                        is a species of wide ecological amplitude, meaning that it can grow in many habitats,
+                        from coastal to inland, wet to dry soil, in the ground and on rocks and trees.</span>
+                    <img class="img" src="../Assets/images/Malyan banyan.jpg">
+                    <h1>Malyan Banyan</h1>
+                    <h3 style="font-weight: bold;">Rs. 2300</h3>
+                </a>
+                <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items">
+                <a href="products2.html">
+                    <span class="product-desc">Ming Aralia is an evergreen shrub or short tree that is erect and
+                        upright and grows up to 26' tall in its native habitat. In NC it is grown as a house
+                        plant. It needs bright indirect light, warm air temperatures, and medium to high
+                        humidity.</span>
+                    <img class="img" src="../Assets/images/Ming Ariala.png">
+                    <h1>Ming Ariala</h1>
+                    <h3 style="font-weight: bold;">Rs. 1100</h3>
+                </a>
+                <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items">
+                <a href="products2.html">
+                    <span class="product-desc">The Pachira is an evergreen broadleaf tree with hand-shaped
+                        compound leaves consisting of up to 9 leaflets. In their natural habitat the trees can
+                        grow up to 20 meters (65ft) tall. Money trees often have a slightly swollen trunk base,
+                        which also serves as a water reservoir, and the bark is brown to grey.</span>
+                    <img class="img" src="../Assets/images/Money Tree.jpg">
+                    <h1>Money Tree</h1>
+                    <h3 style="font-weight: bold;">Rs. 9999</h3>
+                </a>
+                <button onclick="additem(this)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content"><!--Main footer content container-->
+            <div class="footer-left"><!--left side of container-->
+                <div class="footer-desc"><!--Footer links-->
+                    <h2 class="footer-header">About</h2>
+                    <a class="footer-link" href="#">Terms and Policies</a>
+                    <a class="footer-link" href="#">Careers</a>
+                    <a class="footer-link" href="#">Investors</a>
+                    <a class="footer-link" href="#">Sellers License</a>
+                    <a class="footer-link" href="#">Legal Imprint</a>
+                </div>
+                <div class="footer-desc">
+                    <h2 class="footer-header">Help</h2>
+                    <a class="footer-link" href="#">Products Supply</a>
+                    <a class="footer-link" href="#">Gift Cards</a>
+                    <a class="footer-link" href="#">Payments</a>
+                    <a class="footer-link" href="#">Location</a>
+                </div>
+                <div class="footer-desc">
+                    <h2 class="footer-header">Socials</h2>
+                    <a class="footer-social" href="#"><i class="icon-facebook">bonsai.bliss.69</i></a>
+                    <a class="footer-social" href="#"><i class="icon-instagram">@bonsai_bliss101</i></a>
+                    <a class="footer-social" href="#"><i class="icon-twitter">@bonsaibliss69</i></a>
+                    <a class="footer-social" href="#"><i class="icon-twitch">BBtv1001</i></a>
+                </div>
+            </div>
+
+            <div class="footer-right"><!--Right side of container-->
+                <h2 class="footer-header" style="text-align:center;">FeedBack</h2><!--title of form-->
+                <form name="feedback"><!--Feedback form-->
+                    <h3 class="form-header">Name</h3>
+                    <input name="fname" type="text" class="feedback-input" placeholder="First Name">
+                    <input name="lname" type="text" class="feedback-input" placeholder="Last Name"
+                        style="margin-left:20px"><br>
+                    <h3 class="form-header">Contact</h3>
+                    <input name="email" type="text" class="feedback-input" placeholder="Email">
+                    <input name="phone" type="number" class="feedback-input" placeholder="Phone Number"
+                        style="margin-left:20px"><br>
+                    <h3 class="form-header">Message</h3>
+                    <input name="text" class="feedback-input msg" placeholder="Comment"><br>
+                    <button type="button" onclick="validateform()"
+                        class="submit-form">Submit</button><!--on submit, shows suitable message as popup-->
+                </form>
+                <!--Script to validate form-->
+                <script>
+                    function validateform() {
+                        var fname = document.forms['feedback']['fname'].value
+                        var lname = document.forms['feedback']['lname'].value
+                        var phone = document.forms['feedback']['phone'].value
+                        var mail = document.forms['feedback']['email'].value
+                        var msg = document.forms['feedback']['text'].value
+                        if (fname == "" || lname == "" || phone == "" || mail == "" || msg == "") {
+                            popup("Error!", "Empty Fields were detected!")
+                        }
+                        else {
+                            popup("Notice", "Thank you for your feedback!")
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </footer>
+    <div id="sidebar"><!--Sidebar cart-->
+        <label id="toggle-close" for="check"><i class="icon-cancel"></i></label><!--Sidebar close button-->
+        <div class="sidebar-upper"><!--Upper part of sidebar-->
+            <h1>My Cart</h1>
+        </div>
+        <div class="sidebar-main"><!--Main part which contains the list of items-->
+            <ul id="cartlist">
+            </ul>
+        </div>
+        <div class="sidebar-bot"><!--Bottom part which contains puchase button which shows suitable message as popup-->
+            <button onclick="purchase()">Purchase</button>
+        </div>
+    </div>
+    <div class="popup" id="alert"><!--popup div-->
+        <div class="popup-text"><!--The white text box in middle-->
+            <div class="popup-upper"><!--Topic of popup-->
+                <h1 id="popup-header">Text</h1>
+                <button onclick="closepopup()"><i class="icon-cancel"></i></button><!--Close Popup button-->
+            </div>
+            <p id="popup-desc">Text</p><!--popup description-->
+        </div>
+    </div>
+</body>
+
+
+</html>

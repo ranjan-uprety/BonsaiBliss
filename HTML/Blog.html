@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head><!--linking all needed CSS and JS with the HTML file-->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../Assets/css/fontello.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+    <script src="../JS/cart.js"></script>
+    <script src="../JS/popup.js"></script>
+    <title>Blog</title>
+    <style>
+        /*making scrolling smooth*/
+        * {
+            scroll-behavior: smooth;
+        }
+        /*read more button styling*/
+        .readmore {
+            background: none;
+            border: none;
+            font-weight: bolder;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        /*read more button hover effect*/
+        .readmore:hover {
+            text-decoration: underline;
+        }
+        /*expanded text*/
+        .more {
+            display: none;
+        }
+        /*follow us container styling*/
+        .follow a {
+            text-decoration: none;
+            color: black;
+            font-size: 50px;
+            border-radius: 90px;
+            margin: auto;
+            text-align: center;
+            white-space: wrap;
+            padding: 5px;
+            transition: 0.3s;
+        }
+        /*links hover effect*/
+        .follow a:hover {
+            background-color: gray;
+        }
+    </style>
+    <!--function to display expanded content-->
+    <script>
+        function read_more(a) {
+            var dots = a.parentElement.children[4].children[0];
+            var texts = a.parentElement.children[4].children[1];
+            var btn_text = a;
+            if (dots.style.display == "none") {
+                dots.style.display = "inline";
+                btn_text.innerHTML = "Read more";
+                texts.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btn_text.innerHTML = "Read less";
+                texts.style.display = "inline";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" id="check"><!--to check if slider is enabled or no (display:none)-->
+    <nav>
+        <div class="nav-content"><!--creating the content container-->
+            <div class="nav-left"><!--Left side of container-->
+                <img src="../Assets/Logo.png"><!--logo-->
+            </div>
+            <div class="nav-right"><!--right side of container-->
+                <a href="index.html">Home</a><!--Nav links-->
+                <a href="products.html">Products</a>
+                <a href="Blog.html"  class="active">Blog</a>
+                <a href="About.html">About</a>
+                <a href="research.html">Research</a>
+                <label class="myCart" for="check"><i class="icon-basket"></i>Cart</label><!--Cart Button-->
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content"><!--main content container of page-->
+        <div class="header"><!--header of page-->
+            <h2 style="margin-top:20px;">Bliss Blog</h2>
+            <p style="font-size:25px;margin-top: -60px;">Know the present</p>
+        </div>
+
+        <div class="row"><!--container positioning the content-->
+            <div class="leftcolumn"><!--left side of the content-->
+                <div class="card" id="blog1"><!--blog post-->
+                    <h1>Innovative Lighting Solutions to Aid Growing Process of Bonsais</h1><!--blog header-->
+                    <h4>September 25, 2021 by Kristine Lofgren</h4><!--blog date and author-->
+                    <div class="fakeimg" style="height:450px;background-image: url(../Assets/images/Technology.jpg);">
+                    </div><!--image of blog post-->
+                    <p style="color:grey;font-style:italic;">Src:<a
+                            href="https://gardenerspath.com/plants/ornamentals/bonsai-information/">www.gardenerspath.com</a>
+                    </p><!--source of blog which redirects to external link-->
+                    <p style="text-align:justify">The art of bonsai cultivation has been around for centuries, and it
+                        requires a great deal
+                        of<span>...</span><span class="more"> patience and skill. With the right lighting solutions,
+                            however, bonsai growers can take their craft to the next level. Innovative lighting
+                            solutions can help bonsai growers to better control the growing process of their plants and
+                            provide them with more options when it comes to creating beautiful works of art. By using
+                            LED lights and other advanced lighting technologies, bonsai growers can create more vibrant
+                            colors in their plants and increase their growth rate. With these innovative lighting
+                            solutions, bonsais can reach their full potential in terms of size and beauty.</span></p><!--blog description with read more function-->
+                    <button class="readmore" onclick="read_more(this)">Read more</button><!--button for read more function-->
+                </div>
+
+                <!--All other blog posts are on same format-->
+
+                <div class="card" id="blog2">
+                    <h1>The Benefits of Bonsai to Reduce Stress & Anxiety</h1>
+                    <h4>November 16, 2022 by Usha Balasubramanyan</h4>
+                    <div class="fakeimg" style="height:450px;background-image: url(../Assets/images/positive.jpg);">
+                    </div>
+                    <p style="color:grey;font-style:italic;">Src:<a
+                            href="https://www.homelane.com/blog/bonsai-plants-benefits/">www.homelane.com</a>
+                    </p>
+                    <p style="text-align:justify">Bonsai is a Japanese art form that has been used for centuries to
+                        reduce stress and anxiety. It
+                        involves carefully pruning and styling trees and shrubs in a container,<span>...</span><span
+                            class="more"> which can create a calming, peaceful atmosphere. Bonsai
+                            has become increasingly popular in recent years as people are looking for ways to reduce
+                            stress and anxiety without the use of medication. Bonsai provides an outlet for creativity,
+                            reduces stress levels, improves concentration, and helps with relaxation. It also has the
+                            potential to help with physical health issues such as high blood pressure, chronic pain, and
+                            insomnia. By practicing bonsai regularly, you can experience these benefits while improving
+                            your mental health.</span></p>
+                    <button class="readmore" onclick="read_more(this)">Read more</button>
+                </div>
+                <div class="card" id="blog3">
+                    <h1>The Negative Effects of Bonsai on Natural Resources</h1>
+                    <h4>December 22, 2022 by Vastu</h4>
+                    <div class="fakeimg" style="height:450px;background-image: url(../Assets/images/negative.jpg);">
+                    </div>
+                    <p style="color:grey;font-style:italic;">Src:<a
+                            href="https://www.livspace.com/in/magazine/vastu-shastra-home-plants">www.livspace.com</a>
+                    </p>
+                    <p style="text-align:justify">Bonsai trees are becoming increasingly popular as a decorative element
+                        in homes and gardens.
+                        However, this trend has also had some negative impacts on<span>...</span><span class="more"> our
+                            natural resources. The bonsai industry has led to the over-harvesting of wild trees,
+                            deforestation and soil erosion. In addition to this, bonsai requires a lot of water and
+                            fertilizer which can lead to water pollution if not managed properly. As such, it is
+                            important that we consider the environmental impacts of bonsai before we decide to grow them
+                            in our homes or gardens.</span></p>
+                    <button class="readmore" onclick="read_more(this)">Read more</button>
+                </div>
+                <div class="card" id="blog4">
+                    <h1>The Use Of AI To Personalize The Shopping Experience For Bonsais</h1>
+                    <h4>June 1, 2017 by @BonsaiAI</h4>
+                    <div class="fakeimg" style="height:450px;background-image: url(../Assets/images/tech.webp);"></div>
+                    <p style="color:grey;font-style:italic;">Src:<a
+                            href="https://medium.com/@BonsaiAI/bonsai-ai-platform-faa54df0a76b">www.medium.com/@BonsaiAI</a>
+                    </p>
+                    <p style="text-align:justify">Shopping for bonsais can be an overwhelming experience. With the help
+                        of AI, retailers can now
+                        provide shoppers with a personalized shopping experience tailored to<span>...</span><span
+                            class="more"> their individual needs and preferences. AI technology has the ability to
+                            analyze customer data, including past purchases, demographics, and interests, and use it to
+                            recommend products that best meet their needs. This allows retailers to create a more
+                            engaging shopping experience for their customers by providing them with personalized product
+                            recommendations that are tailored specifically for them. By leveraging AI technology,
+                            retailers can offer customers a more personalized shopping experience that encourages
+                            loyalty and increases sales.</span></p>
+                    <button class="readmore" onclick="read_more(this)">Read more</button>
+                </div>
+            </div>
+            <div class="rightcolumn"><!--right side of content-->
+                <a href="About.html" style="text-decoration:none;color:black"><!--about us container which redirects to about us page-->
+                    <div class="card">
+                        <h2>About Us</h2>
+                        <div class="fakeimg"
+                            style="height:250px;background-image: url(../Assets/images/profile.jpg);outline:none;">
+                        </div>
+                        <p>We are a group affiliated with Islington college, graduating in 2025...</p>
+                    </div>
+                </a>
+                <div class="card"><!--popupar posts container which has link that scroll to the corresponding blog post on click-->
+                    <h2>Popular Post</h2>
+                    <a href="#blog1" style="text-decoration:none;">
+                        <div class="fakeimg rightimg"
+                            style="height:30px;background-image: url(../Assets/images/Technology.jpg);"></div>
+                    </a><br>
+                    <a href="#blog2" style="text-decoration:none;">
+                        <div class="fakeimg rightimg"
+                            style="height:30px;background-image: url(../Assets/images/positive.jpg);"></div>
+                    </a><br>
+                    <a href="#blog3" style="text-decoration:none;">
+                        <div class="fakeimg rightimg"
+                            style="height:30px;background-image: url(../Assets/images/negative.jpg);"></div>
+                    </a><br>
+                    <a href="#blog4" style="text-decoration:none;">
+                        <div class="fakeimg rightimg"
+                            style="height:30px;background-image: url(../Assets/images/tech.webp);"></div>
+                    </a>
+                </div>
+                <div class="card follow"><!--follow us container which has social links-->
+                    <h2>Follow Us</h2>
+                    <a href="#"><i class="icon-facebook"></i></a>
+                    <a href="#"><i class="icon-instagram"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a>
+                    <a href="#"><i class="icon-twitch"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content"><!--Main footer content container-->
+            <div class="footer-left"><!--left side of container-->
+                <div class="footer-desc"><!--Footer links-->
+                    <h2 class="footer-header">About</h2>
+                    <a class="footer-link" href="#">Terms and Policies</a>
+                    <a class="footer-link" href="#">Careers</a>
+                    <a class="footer-link" href="#">Investors</a>
+                    <a class="footer-link" href="#">Sellers License</a>
+                    <a class="footer-link" href="#">Legal Imprint</a>
+                </div>
+                <div class="footer-desc">
+                    <h2 class="footer-header">Help</h2>
+                    <a class="footer-link" href="#">Products Supply</a>
+                    <a class="footer-link" href="#">Gift Cards</a>
+                    <a class="footer-link" href="#">Payments</a>
+                    <a class="footer-link" href="#">Location</a>
+                </div>
+                <div class="footer-desc">
+                    <h2 class="footer-header">Socials</h2>
+                    <a class="footer-social" href="#"><i class="icon-facebook">bonsai.bliss.69</i></a>
+                    <a class="footer-social" href="#"><i class="icon-instagram">@bonsai_bliss101</i></a>
+                    <a class="footer-social" href="#"><i class="icon-twitter">@bonsaibliss69</i></a>
+                    <a class="footer-social" href="#"><i class="icon-twitch">BBtv1001</i></a>
+                </div>
+            </div>
+
+            <div class="footer-right"><!--Right side of container-->
+                <h2 class="footer-header" style="text-align:center;">FeedBack</h2><!--title of form-->
+                <form name="feedback"><!--Feedback form-->
+                    <h3 class="form-header">Name</h3>
+                    <input name="fname" type="text" class="feedback-input" placeholder="First Name">
+                    <input name="lname" type="text" class="feedback-input" placeholder="Last Name"
+                        style="margin-left:20px"><br>
+                    <h3 class="form-header">Contact</h3>
+                    <input name="email" type="text" class="feedback-input" placeholder="Email">
+                    <input name="phone" type="number" class="feedback-input" placeholder="Phone Number"
+                        style="margin-left:20px"><br>
+                    <h3 class="form-header">Message</h3>
+                    <input name="text" class="feedback-input msg" placeholder="Comment"><br>
+                    <button type="button" onclick="validateform()"
+                        class="submit-form">Submit</button><!--on submit, shows suitable message as popup-->
+                </form>
+                <!--Script to validate form-->
+                <script>
+                    function validateform() {
+                        var fname = document.forms['feedback']['fname'].value
+                        var lname = document.forms['feedback']['lname'].value
+                        var phone = document.forms['feedback']['phone'].value
+                        var mail = document.forms['feedback']['email'].value
+                        var msg = document.forms['feedback']['text'].value
+                        if (fname == "" || lname == "" || phone == "" || mail == "" || msg == "") {
+                            popup("Error!", "Empty Fields were detected!")
+                        }
+                        else {
+                            popup("Notice", "Thank you for your feedback!")
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </footer>
+    <div id="sidebar"><!--Sidebar cart-->
+        <label id="toggle-close" for="check"><i class="icon-cancel"></i></label><!--Sidebar close button-->
+        <div class="sidebar-upper"><!--Upper part of sidebar-->
+            <h1>My Cart</h1>
+        </div>
+        <div class="sidebar-main"><!--Main part which contains the list of items-->
+            <ul id="cartlist">
+            </ul>
+        </div>
+        <div class="sidebar-bot"><!--Bottom part which contains puchase button which shows suitable message as popup-->
+            <button onclick="purchase()">Purchase</button>
+        </div>
+    </div>
+    <div class="popup" id="alert"><!--popup div-->
+        <div class="popup-text"><!--The white text box in middle-->
+            <div class="popup-upper"><!--Topic of popup-->
+                <h1 id="popup-header">Text</h1>
+                <button onclick="closepopup()"><i class="icon-cancel"></i></button><!--Close Popup button-->
+            </div>
+            <p id="popup-desc">Text</p><!--popup description-->
+        </div>
+    </div>
+</body>
+
+</html>

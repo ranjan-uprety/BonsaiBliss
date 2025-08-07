@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head><!--linking all needed CSS and JS with the HTML file-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/products.css">
+  <link rel="stylesheet" href="../CSS/nav.css">
+  <link rel="stylesheet" href="../CSS/cart.css">
+  <link rel="stylesheet" href="../CSS/footer.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../Assets/css/fontello.css">
+  <script src="../JS/cart.js"></script>
+  <script src="../JS/popup.js"></script>
+  <title>Home</title>
+</head>
+<style>
+  /*Importing a font*/
+  @font-face {
+    font-family: Apple Symbols;
+    src: url(../Assets/Montserrat-Medium.ttf);
+  }
+
+  /*Making smooth scroll*/
+  * {
+    scroll-behavior: smooth;
+  }
+
+  /*positioning the quote*/
+  .section1 {
+    height: 700px;
+    width: 100%;
+    background-image: url(../Assets/images/ficus-ginseng.jpg);
+    display: flex;
+    object-fit: cover;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0px 2px 2px black;
+  }
+
+  /*Justifying the quote*/
+  .quote {
+    display: flex;
+    flex-direction: column;
+    font-family: Apple Symbols;
+    width: 45%;
+    text-align: justify;
+    margin-left: 50px;
+    justify-content: center;
+    color: #2f2626;
+  }
+
+  /*Styling the quote*/
+  .quote h1 {
+    font-size: 36px;
+  }
+
+  /*Styling the quote*/
+  .quote p {
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  /*Styling the quote*/
+  .quote a {
+    color: #2f2626;
+    text-decoration: none;
+  }
+
+  /*Styling the quote*/
+  .quote a:hover {
+    text-decoration: underline;
+  }
+
+  /*Positioning the title*/
+  .feat-title {
+    font-size: 35px;
+    font-family: Apple Symbols;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  /*making the slider horizontal*/
+  .feature {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*making the slider slide*/
+  .content-grid1 {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-left: 0 0 10px 7px;
+    padding: 10px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /*adjusting the items*/
+  .items {
+    height: 500px;
+    transform-origin: top;
+  }
+
+  /*adjusting the items*/
+  .items h1 {
+    white-space: nowrap;
+  }
+
+  /*adjusting the items*/
+  .feat {
+    width: fit-content;
+    margin: 0 15px;
+    padding: 0 15px;
+  }
+
+  /*positioning and styling the slider buttons*/
+  .slider-btn {
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #2f2626;
+    background-color: #2f2626;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+    align-items: center;
+    color: white;
+    z-index: 1;
+    transition: 0.2s;
+  }
+
+  /*styling the slider buttons*/
+  .slider-btn:hover {
+    color: #2f2626;
+    background-color: white;
+  }
+
+  /*positioning the left slider button*/
+  #btn_1 {
+    left: 0;
+  }
+
+  /*positioning the right slider button*/
+  #btn_2 {
+    right: 0;
+  }
+</style>
+
+<body>
+  <input type="checkbox" id="check"><!--to check if slider is enabled or no (display:none)-->
+  <nav>
+    <div class="nav-content"><!--creating the content container-->
+      <div class="nav-left"><!--Left side of container-->
+        <img src="../Assets/Logo.png"><!--logo-->
+      </div>
+      <div class="nav-right"><!--right side of container-->
+        <a href="index.html" class="active">Home</a><!--Nav links-->
+        <a href="products.html">Products</a>
+        <a href="Blog.html">Blog</a>
+        <a href="About.html">About</a>
+        <a href="research.html">Research</a>
+        <label class="myCart" for="check"><i class="icon-basket"></i>Cart</label><!--Cart Button-->
+      </div>
+    </div>
+  </nav>
+  <div class="main-content">
+    <div class="section1"><!--header-->
+      <div class="quote"><!--quote-->
+        <h1>The object is not to make the tree look like a bonsai, but to make the bonsai look like a tree.</h1>
+        <p>-John Naka</p>
+        <a href="products.html"><!--redirects to products page-->
+          <h2>Get your Bonsai today and get a chance of 20% cash back on your first order</h2>
+        </a>
+      </div>
+    </div>
+    <p class="feat-title">Featured Products</p><!--title of slider-->
+    <div class="feature">
+      <a class="slider-btn" id="btn_1" href="#scroll1"><</a><!--button to scroll-->
+          <div class="content-grid1"><!--actual slider-->
+            <div class="items feat" id="scroll1"><!--item in slider-->
+              <a href="products2.html">
+                <span class="product-desc">The European beech (Fagus sylvatica L.) is a large deciduous tree that
+                  commonly
+                  reaches 30-40 m and is capable of attaining heights up to 50 m in some locations1. It is able to
+                  maintain
+                  a
+                  high rate of growth until a relatively mature age.</span>
+                <img class="img" src="../Assets/images/european beech tree.jpg">
+                <h1>European Beech Tree</h1>
+                <h3 style="font-weight: bold;">Rs. 1800</h3>
+              </a>
+              <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items feat"><!--item in slider-->
+              <a href="products2.html">
+                <span class="product-desc">Azaleas are typically deciduous while other rhododendrons are evergreen.
+                  Azalea
+                  flowers are funnel-shaped, somewhat two-lipped, and often fragrant. Flowers of rhododendrons, on the
+                  other
+                  hand, are more often bell-shaped. Azalea flowers typically have only 5 projecting stamens, as compared
+                  with
+                  10 (or more) in rhododendrons. Intermediate forms, however, do occur.</span>
+                <img class="img" src="../Assets/images/Azlea.jpg">
+                <h1>Azlea</h1>
+                <h3 style="font-weight: bold;">Rs. 1200</h3>
+              </a>
+              <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items feat"><!--item in slider-->
+              <a href="products2.html">
+                <span class="product-desc">Chinese elm is a large ornamental deciduous shade tree in the Ulmaceae (elm)
+                  family
+                  native to China, Korea, and Japan. A fast-growing, deciduous or evergreen tree, Chinese elm forms a
+                  graceful, upright, rounded canopy of long, arching, and somewhat weeping branches which are clothed
+                  with
+                  one
+                  to two and a half-inch-long, shiny, dark green leaves.</span>
+                <img class="img" src="../Assets/images/chinese elm.jpg">
+                <h1>Chinese elm</h1>
+                <h3 style="font-weight: bold;">Rs. 2000</h3>
+              </a>
+              <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items feat"><!--item in slider-->
+              <a href="products2.html">
+                <span class="product-desc">The jade tree plant, or Crassula ovata, is native to the Capetown area of
+                  South
+                  Africa. The jade tree plant is part of a plant classification known as succulents. The jade plant has
+                  thick,
+                  glossy, deep green, oval shaped leaves and thick, brown stems.</span>
+                <img class="img" src="../Assets/images/Fade.jpg">
+                <h1>Jade</h1>
+                <h3 style="font-weight: bold;">Rs. 1000</h3>
+              </a>
+              <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items feat"><!--item in slider-->
+              <a href="products2.html">
+                <span class="product-desc">Japanese maple is a small deciduous tree or large shrub with a broadly
+                  spreading
+                  crown. The plant can be grown as a small single-stemmed tree or large multiple stemmed shrub. The
+                  habit is
+                  rounded to broad-rounded, with a layered branching structure similar to flowering dogwood.</span>
+                <img class="img" src="../Assets/images/japanese maple.jpg">
+                <h1>Japanese Maple</h1>
+                <h3 style="font-weight: bold;">Rs. 1000</h3>
+              </a>
+              <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items feat"><!--item in slider-->
+              <a href="products2.html">
+                <span class="product-desc">The olive tree ranges in height from 3 to 12 metres (10 to 40 feet) or more
+                  and
+                  has
+                  numerous branches. Its leaves, leathery and lance-shaped, are dark green above and silvery on the
+                  underside
+                  and are paired opposite each other on the twig. The wood is resistant to decay.</span>
+                <img class="img" src="../Assets/images/Olive.jpg">
+                <h1>Olive</h1>
+                <h3 style="font-weight: bold;"><span style="text-decoration:line-through;">Rs. 2100</span><br> Rs. 1999</h3>
+              </a>
+              <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items feat"><!--item in slider-->
+              <a href="products2.html">
+                <span class="product-desc">The white oak is a large, strong, imposing specimen. It has a short stocky
+                  trunk
+                  with massive horizontial limbs. The wide spreading branches form an upright, broad-rounded
+                  crown.</span>
+                <img class="img" src="../Assets/images/white oak.jpg">
+                <h1>White Oak</h1>
+                <h3 style="font-weight: bold;">Rs. 1250</h3>
+              </a>
+              <button onclick="additem(this)">Add to Cart</button>
+            </div>
+
+            <div class="items feat" id="scroll2">
+              <a href="products2.html"><!--item in slider-->
+                <span class="product-desc">Banksia is a genus of around 170 species in the plant family Proteaceae.
+                  These
+                  Australian wildflowers and popular garden plants are easily recognised by their characteristic flower
+                  spikes, and fruiting "cones" and heads. Banksias range in size from prostrate woody shrubs to trees up
+                  to
+                  30
+                  metres tall.</span>
+                <img class="img" src="../Assets/images/Banksia.jpg">
+                <h1>Banksia</h1>
+                <h3 style="font-weight: bold;">Rs. 1300</h3>
+              </a>
+              <button onclick="additem(this)">Add to Cart</button>
+            </div>
+          </div>
+          <a class="slider-btn" id="btn_2" href="#scroll2">></a><!--button to scroll-->
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content"><!--Main footer content container-->
+      <div class="footer-left"><!--left side of container-->
+        <div class="footer-desc"><!--Footer links-->
+          <h2 class="footer-header">About</h2>
+          <a class="footer-link" href="#">Terms and Policies</a>
+          <a class="footer-link" href="#">Careers</a>
+          <a class="footer-link" href="#">Investors</a>
+          <a class="footer-link" href="#">Sellers License</a>
+          <a class="footer-link" href="#">Legal Imprint</a>
+        </div>
+        <div class="footer-desc">
+          <h2 class="footer-header">Help</h2>
+          <a class="footer-link" href="#">Products Supply</a>
+          <a class="footer-link" href="#">Gift Cards</a>
+          <a class="footer-link" href="#">Payments</a>
+          <a class="footer-link" href="#">Location</a>
+        </div>
+        <div class="footer-desc">
+          <h2 class="footer-header">Socials</h2>
+          <a class="footer-social" href="#"><i class="icon-facebook">bonsai.bliss.69</i></a>
+          <a class="footer-social" href="#"><i class="icon-instagram">@bonsai_bliss101</i></a>
+          <a class="footer-social" href="#"><i class="icon-twitter">@bonsaibliss69</i></a>
+          <a class="footer-social" href="#"><i class="icon-twitch">BBtv1001</i></a>
+        </div>
+      </div>
+
+      <div class="footer-right"><!--Right side of container-->
+        <h2 class="footer-header" style="text-align:center;">FeedBack</h2><!--title of form-->
+        <form name="feedback"><!--Feedback form-->
+          <h3 class="form-header">Name</h3>
+          <input name="fname" type="text" class="feedback-input" placeholder="First Name">
+          <input name="lname" type="text" class="feedback-input" placeholder="Last Name" style="margin-left:20px"><br>
+          <h3 class="form-header">Contact</h3>
+          <input name="email" type="text" class="feedback-input" placeholder="Email">
+          <input name="phone" type="number" class="feedback-input" placeholder="Phone Number"
+            style="margin-left:20px"><br>
+          <h3 class="form-header">Message</h3>
+          <input name="text" class="feedback-input msg" placeholder="Comment"><br>
+          <button type="button" onclick="validateform()"
+            class="submit-form">Submit</button><!--on submit, shows suitable message as popup-->
+        </form>
+        <!--Script to validate form-->
+        <script>
+          function validateform() {
+            var fname = document.forms['feedback']['fname'].value
+            var lname = document.forms['feedback']['lname'].value
+            var phone = document.forms['feedback']['phone'].value
+            var mail = document.forms['feedback']['email'].value
+            var msg = document.forms['feedback']['text'].value
+            if (fname == "" || lname == "" || phone == "" || mail == "" || msg == "") {
+              popup("Error!", "Empty Fields were detected!")
+            }
+            else {
+              popup("Notice", "Thank you for your feedback!")
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </footer>
+  <div id="sidebar"><!--Sidebar cart-->
+    <label id="toggle-close" for="check"><i class="icon-cancel"></i></label><!--Sidebar close button-->
+    <div class="sidebar-upper"><!--Upper part of sidebar-->
+      <h1>My Cart</h1>
+    </div>
+    <div class="sidebar-main"><!--Main part which contains the list of items-->
+      <ul id="cartlist">
+      </ul>
+    </div>
+    <div class="sidebar-bot"><!--Bottom part which contains puchase button which shows suitable message as popup-->
+      <button onclick="purchase()">Purchase</button>
+    </div>
+  </div>
+  <div class="popup" id="alert"><!--popup div-->
+    <div class="popup-text"><!--The white text box in middle-->
+      <div class="popup-upper"><!--Topic of popup-->
+        <h1 id="popup-header">Text</h1>
+        <button onclick="closepopup()"><i class="icon-cancel"></i></button><!--Close Popup button-->
+      </div>
+      <p id="popup-desc">Text</p><!--popup description-->
+    </div>
+  </div>
+</body>
+
+</html>
