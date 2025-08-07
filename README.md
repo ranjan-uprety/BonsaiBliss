@@ -19,4 +19,4 @@ Bonsai Bliss is a static web project built to showcase a plant marketplace. It f
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/BonsaiBliss.git
+   git clone https://github.com/ranjan-uprety/BonsaiBliss.git
