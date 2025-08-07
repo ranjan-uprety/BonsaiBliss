@@ -51,3 +51,14 @@ To run this project locally:
 ```bash
 git clone https://github.com/ranjan-uprety/BonsaiBliss.git
 cd BonsaiBliss
+
+```
+
+Then, open the html/index.html file in your browser. No server setup required.
+
+🙌 Contributions
+This project is a part of personal web development learning and exploration.
+Contributions are welcome via pull requests, suggestions, or issue reports.
+
+📧 Contact
+Created by Ranjan Uprety – feel free to reach out for feedback or collaboration ideas!
