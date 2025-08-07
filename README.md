@@ -1,22 +1,51 @@
-# Bonsai Bliss
+# 🌿 Bonsai Bliss
 
-Welcome to **Bonsai Bliss**, an elegant online marketplace designed for bonsai enthusiasts and plant lovers. This web application allows users to browse, explore, and purchase a diverse collection of premium bonsai trees and plants with a seamless user experience.
+Welcome to **Bonsai Bliss**, an elegant online marketplace designed for bonsai enthusiasts and plant lovers. This static web application allows users to browse, explore, and purchase a diverse collection of premium bonsai trees and plants with a seamless, aesthetic user experience.
 
-## Overview
+---
 
-Bonsai Bliss is a static web project built to showcase a plant marketplace. It features a responsive design, a custom product slider, a shopping cart system, and a feedback form, making it an ideal starting point for an e-commerce platform.
+## 🛒 Overview
 
-- **Purpose**: Provide an online platform for buying bonsai and plants.
-- **Target Audience**: Horticulture enthusiasts, gift shoppers, and decorators.
+**Bonsai Bliss** is a front-end web project built to showcase a plant e-commerce platform. It features:
 
-## Technologies Used
+- 🌱 A responsive homepage with modern plant-themed design  
+- 🪴 Custom product slider to highlight best-selling items  
+- 🛍️ Shopping cart system using local storage  
+- ✉️ Contact/feedback form with basic validation  
 
-- **HTML5**: For structuring the web pages.
-- **CSS3**: For styling, including custom fonts and responsive layouts.
-- **JavaScript**: For dynamic features like cart management and form validation.
+---
 
-## Installation
+## 🎯 Purpose & Target Audience
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ranjan-uprety/BonsaiBliss.git
+- **Purpose**: To provide a serene and beautiful online platform for browsing and buying bonsai and other plants.
+- **Target Audience**: Horticulture enthusiasts, gift shoppers, interior decorators, and anyone looking for botanical beauty.
+
+---
+
+## 💻 Technologies Used
+
+- **HTML5** – For clean and semantic webpage structure  
+- **CSS3** – For elegant styling, animations, and responsive design  
+- **JavaScript** – For dynamic interactions (e.g., cart, form validation)
+
+---
+
+## 📸 Preview
+
+### 🏠 Homepage
+![Homepage](assets/images/home.jpg)
+
+### 🪴 Product Page
+![Product Page](assets/images/productpage.jpg)
+
+> _More screenshots can be found in the `assets/images/` directory._
+
+---
+
+## 🚀 Installation & Setup
+
+To run this project locally:
+
+```bash
+git clone https://github.com/ranjan-uprety/BonsaiBliss.git
+cd BonsaiBliss
