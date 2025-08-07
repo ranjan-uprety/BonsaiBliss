@@ -1,0 +1,72 @@
+body {
+    background: #f1f1f1;
+}
+/*importing a font*/
+@font-face {
+    font-family: Montserrat;
+    src: url(../Assets/Montserrat-Medium.ttf);
+}
+
+/* Blog Title */
+.header {
+    padding: 15px;
+    font-size: 60px;
+    font-family: Montserrat;
+    text-align: center;
+    background-image: url(../Assets/images/BlogBanner.jpg);
+    background-size: cover;
+    color:rgb(255, 255, 255);
+    stroke: #2f2626;
+    background-repeat: no-repeat;
+    box-shadow: 0px 2px 4px black;
+}
+
+/* Left side of content */
+.leftcolumn {
+    float: left;
+    width: 65%;
+    padding-left: 20px;
+}
+
+/* Right side of content */
+.rightcolumn {
+    float: right;
+    width: 25%;
+    padding-right: 20px;
+}
+
+/* Image of blog */
+.fakeimg {
+    background-color: #aaa;
+    background-size: cover;
+    object-fit: fill;
+    outline:3px solid black;
+    background-position: center ;
+    border-radius: 15px;
+    justify-self: center;
+    width: 95%;
+    padding: 20px;
+}
+/*adjusting an image in right side*/
+.rightimg {
+    width:88%;
+}
+
+/* container separating content */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    outline: 2px solid #2f2626;
+}
+/* text of card container*/
+.card p {
+    font-size: 20px;
+}
+
+/*positioning the cards*/
+.row {
+    display: table;
+    margin-bottom: 20px;
+}
