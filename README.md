@@ -33,10 +33,12 @@ Welcome to **Bonsai Bliss**, an elegant online marketplace designed for bonsai e
 ## 📸 Preview
 
 ### 🏠 Homepage
-![Homepage](assets/images/home.jpg)
+![Homepage](Assets/images/home.jpg)
+
 
 ### 🪴 Product Page
-![Product Page](assets/images/productpage.jpg)
+![Product Page](Assets/images/productpage.jpg)
+
 
 > _More screenshots can be found in the `assets/images/` directory._
 
