@@ -64,5 +64,5 @@ Contributions are welcome via pull requests, suggestions, or issue reports.
 
 ## 📧 Contact
 
-Created by [Ranjan Uprety](https://github.com/ranjan-uprety) – feel free to reach out for feedback or collaboration ideas!
+Created by [Ranjan Uprety](https://www.linkedin.com/in/ranjan-uprety/) – feel free to reach out for feedback or collaboration ideas!
 
